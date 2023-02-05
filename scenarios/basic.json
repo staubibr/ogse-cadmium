@@ -1,0 +1,33 @@
+{
+    "instances": [{
+            "id": "Generator",
+            "type": "uuid_test_1",
+            "properties": ["cadmium_id", "rate", "min", "max"],
+            "models": [["999", 3, 1, 5], ["2", 12, 5, 20]]
+        }, {
+            "id": "Processor",
+            "type": "uuid_test_2",
+            "properties": ["cadmium_id", "multiplier", "delay"],
+            "models": [["3", 2, 20.0], ["4", 2, 5.0], ["5", 1, 10.0]]
+        }, {
+            "id": "Accumulator",
+            "type": "uuid_test_3",
+            "properties": ["cadmium_id", "idnum"],
+            "models": [["6"],["7"],["8"],["9"]]
+        }
+    ],
+    "couplings": [{
+            "from_model": "Generator",
+            "from_port": "generator_out",
+            "to_model": "Processor",
+            "to_port": "processor_in",
+            "couplings": [["999","3"],["999","4"],["2","4"],["2","5"]]
+        },{
+            "from_model": "Processor",
+            "from_port": "processor_out",
+            "to_model": "Accumulator",
+            "to_port": "accumulator_in",
+            "couplings": [["3","6"],["4","7"],["5","8"],["3","9"],["4","9"],["5","9"]]
+        }
+    ]
+}
