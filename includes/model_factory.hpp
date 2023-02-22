@@ -17,6 +17,8 @@
 #include <models/basic/generator.hpp>
 #include <models/basic/processor.hpp>
 #include <models/basic/accumulator.hpp>
+#include <models/oil_gdp/oil_price_generator.hpp>
+#include <models/oil_gdp/gdp_cell.hpp>
 
 namespace ogse {
     class model_factory {
@@ -42,6 +44,8 @@ namespace ogse {
             model_factory::register_model<generator>("uuid_test_1");
             model_factory::register_model<processor>("uuid_test_2");
             model_factory::register_model<accumulator>("uuid_test_3");
+            model_factory::register_model<oil_price_generator>("pg1-01");
+            model_factory::register_model<gdp_cell>("gdp1-01");
         }
 
         static bool contains(const std::string& s) {
