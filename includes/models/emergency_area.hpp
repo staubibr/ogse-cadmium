@@ -53,7 +53,7 @@ public:
         double rate = 1.9 / 1000;
 
 		params.id = j_params.at("dauid").get<std::string>();
-		params.population = j_params.at("DApop_2016").get<int>();
+		params.population = j_params.at("dapop_2016").get<int>();
 		params.n_ports = 3;
 
 		params.emergency_max = utility::round_to_int(rate * params.population);

@@ -58,6 +58,7 @@ public:
             s.value = s.value + params.multiplier * i->data;
         }
 
+        // TODO: Review, there's something weird here should be s.time_advance - e ?
         s.time_advance = e;
     }
 
