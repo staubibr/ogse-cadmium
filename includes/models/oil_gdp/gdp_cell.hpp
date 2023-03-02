@@ -63,7 +63,7 @@ public:
         gdp_cell_in = addInBigPort<packet_oil>("gdp_cell_in");
 
         // get paramaters from json
-        params.idnum = j_params.at("idnum").get<std::string>();
+        params.idnum = std::to_string(j_params.at("idnum").get<int>());
         params.gdp_hist = j_params.at("gdp_hist").get<std::vector<long>>();
 
         // save to state

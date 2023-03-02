@@ -44,8 +44,8 @@ namespace ogse {
             model_factory::register_model<generator>("uuid_test_1");
             model_factory::register_model<processor>("uuid_test_2");
             model_factory::register_model<accumulator>("uuid_test_3");
-            model_factory::register_model<oil_price_generator>("pg1-01");
-            model_factory::register_model<gdp_cell>("gdp1-01");
+            model_factory::register_model<oil_price_generator>("26066ec1-8150-498e-9396-cf9af98a45d8");
+            model_factory::register_model<gdp_cell>("21567c86-34f0-4f13-a6f0-ddc05ca45fe5");
         }
 
         static bool contains(const std::string& s) {
