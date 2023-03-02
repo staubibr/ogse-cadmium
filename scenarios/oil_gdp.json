@@ -11,7 +11,7 @@
         }, {
             "id": "GDP Cell",
             "type": "gdp1-01",
-            "properties": ["cadmium_id", "id_num", "gdp_hist"],
+            "properties": ["cadmium_id", "idnum", "gdp_hist"],
             "models": [["2", "111", [2509127, 2621452, 3001234]], ["3", "112", [4071523, 4002432, 4205672]], ["4", "113", [1135312, 1005123, 1251284]]]
         }
     ],

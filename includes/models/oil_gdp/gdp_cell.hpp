@@ -19,7 +19,7 @@
 
 // json file parameters
 struct gdp_cell_params {
-    std::string id_num;
+    std::string idnum;
     std::vector<long> gdp_hist = {0, 0, 0}; // gdp history (date asc t-3, t-2, t-1)
 };
 
@@ -41,13 +41,13 @@ struct gdp_cell_state {
 
     int prices_received = 0; // counter for number of oil prices received
 
-    std::string id_num; // grid cell id
+    std::string idnum; // grid cell id
     std::vector<long> gdp_hist = {0, 0, 0};  // gdp history (date asc t-3, t-2, t-1)
     std::vector<double> price_hist = {0.0, 0.0, 0.0, 0.0}; // oil price history (date asc t-3, t-2, t-1, t)
 };
 
 std::ostream& operator<<(std::ostream &out, const gdp_cell_state& s) {
-    return out << s.id_num << ", " << s.gdp << ", " << s.mom << ", " << std::fixed << std::setprecision(2) << s.mom_gr;
+    return out << s.idnum << ", " << s.gdp << ", " << s.mom << ", " << std::fixed << std::setprecision(2) << s.mom_gr;
 }
 
 class gdp_cell: public cadmium::Atomic<gdp_cell_state> {
@@ -63,11 +63,11 @@ public:
         gdp_cell_in = addInBigPort<packet_oil>("gdp_cell_in");
 
         // get paramaters from json
-        params.id_num = j_params.at("id_num").get<std::string>();
+        params.idnum = j_params.at("idnum").get<std::string>();
         params.gdp_hist = j_params.at("gdp_hist").get<std::vector<long>>();
 
         // save to state
-        state.id_num = params.id_num;
+        state.idnum = params.idnum;
         state.gdp_hist = params.gdp_hist;
 
     }
