@@ -47,7 +47,7 @@ struct gdp_cell_state {
 };
 
 std::ostream& operator<<(std::ostream &out, const gdp_cell_state& s) {
-    return out << s.idnum << ", " << s.gdp << ", " << s.mom << ", " << std::fixed << std::setprecision(2) << s.mom_gr;
+    return out << s.idnum << ", " << s.price_hist[3] << ", " << s.gdp << ", " << s.mom << ", " << std::fixed << std::setprecision(2) << s.mom_gr;
 }
 
 class gdp_cell: public cadmium::Atomic<gdp_cell_state> {
