@@ -19,6 +19,9 @@
 #include <models/basic/accumulator.hpp>
 #include <models/oil_gdp/oil_price_generator.hpp>
 #include <models/oil_gdp/gdp_cell.hpp>
+#include <models/bem/cf.hpp>
+#include <models/bem/br.hpp>
+#include <models/bem/bc.hpp>
 
 namespace ogse {
     class model_factory {
@@ -46,6 +49,9 @@ namespace ogse {
             model_factory::register_model<accumulator>("uuid_test_3");
             model_factory::register_model<oil_price_generator>("9b27362b-d8bd-4de4-a0c7-0288b5f47b75");
             model_factory::register_model<gdp_cell>("9f998018-bf1c-48dd-b300-59ad478cd071");
+            model_factory::register_model<cadmium::example::bem::Cf>("69f0d3b3-6d16-4f83-9c0a-9ef47baee97e");
+            model_factory::register_model<cadmium::example::bem::Br>("7cc936a3-d203-41a7-91e5-e07634c6206a");
+            model_factory::register_model<cadmium::example::bem::Bc>("8aca7ca3-aaea-4829-9400-f94cf54eafd4");
         }
 
         static bool contains(const std::string& s) {
